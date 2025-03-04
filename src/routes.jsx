@@ -11,10 +11,8 @@ const router = createBrowserRouter([
 {
     path:'/lista-de-usuarios',
     element: <ListUsers/>
-},
-{
-    path:'edicao-de-usuarios'
 }
+
 
 ])
 export default router

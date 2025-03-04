@@ -1,3 +1,7 @@
+import { useRef } from 'react'
+import api from '../../services/api'
+
+
 import {
   Title,
   Container,
@@ -10,15 +14,21 @@ import {
 } from './styles'
 
 import UsersImage from '../../assets/Users.png'
-import { useRef } from 'react'
 
 function Home() {
 const inputName = useRef()
 const inputAge = useRef()
-const inputEmail = useRef() 
+const inputEmail = useRef()
 
-function registerNewUser(){
-console.log (inputName.current.value)     
+
+async function registerNewUser(){
+const data = await api.post('/usuarios',{
+  email: inputEmail.current.value ,
+  // biome-ignore lint/style/useNumberNamespace: <explanation>
+  age: parseInt( inputAge.current.value),
+  name: inputName.current.value
+
+})
 }
 
 
