@@ -27,9 +27,9 @@ gap: 20px;
 margin: 40px 0;
 
 @media (max-width:750px){
-    grid: 1fr;
-
+    grid-template-columns: 1fr;
 }
+
 
 `
 
@@ -41,7 +41,7 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 gap: 20px;
-max-width: 380;
+max-width: 380px;
 
 h3{
     color: #fff;
